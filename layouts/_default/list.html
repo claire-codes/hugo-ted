@@ -17,6 +17,7 @@
 					<i class="fas fa-calculator"></i>&nbsp;
 					{{ $postCount := len .Data.Pages }} {{ $postCount }} blog posts
 				</div>
+				<div class="c-filter-container js-filter-container"></div>
 				<ul class="c-post-list">
 				{{ range .Data.Pages }}
 					<li class="c-post-list__item">
@@ -33,5 +34,6 @@
 			</div>
 		</main>
 		{{ partial "footer.html" . }}
+		<script src="/js/filter.js"></script>
 	</body>
 </html>
