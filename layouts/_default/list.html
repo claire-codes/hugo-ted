@@ -18,7 +18,7 @@
 					{{ $postCount := len .Data.Pages }} {{ $postCount }} blog posts
 				</div>
 				<div class="c-filter-container js-filter-container"></div>
-				<ul class="c-post-list">
+				<ul class="c-post-list c-view-all--off js-post-list">
 				{{ range .Data.Pages }}
 					<li class="c-post-list__item">
 						<div>
@@ -31,9 +31,11 @@
 					</li>
 				{{ end }}
 				</ul>
+				<div class="c-view-all__container"><button type="button" class="c-view-all__button js-view-all-button">View All</button></div>
 			</div>
 		</main>
 		{{ partial "footer.html" . }}
 		<script src="/js/filter.js"></script>
+		<script src="/js/view-all.js"></script>
 	</body>
 </html>
