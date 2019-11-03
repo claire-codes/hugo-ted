@@ -1,25 +1,44 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode }}">
-	<head>
-		<title> {{ .Site.Title }} </title>
-		<meta name="description" content="{{ .Site.Params.Description }}">
+  <head>
+    <title>{{ .Site.Title }}</title>
+    <meta name="description" content="{{ .Site.Params.Description }}" />
 
-		{{ partial "head.html" . }}
+    {{ partial "head.html" . }}
+  </head>
+  <body class="o-body">
+    {{ partial "header.html" . }}
 
-	</head>
-	<body class="o-body">
-		{{ partial "header.html" . }}
+    <div class="o-main__wrapper">
+      <div class="c-cta">
+        <p>I am currently <em>looking for work</em>.</p>
+      </div>
 
-        <div class="o-main__wrapper">
-			Hello 👋 This is my personal site. I'm still trying to work out what to put on this page, sigh, so while I do, why not:
-			<ul>
-				<li>read a post from my <a href="blog">blog</a>, where I write about frontend web development</li>
-				<li>find out what I've been up to this week on my <a href="dev-diary">Dev Diary page</a></li>
-				<li>peruse my photos on my coding-themed <a href="https://www.instagram.com/claire_codes/">Instagram account</a></li>
-				<li>turn your computer or phone off and go outside ☀️</li>
-			</ul>
-		</div>
+      <div>
+        <p>
+          Hi, I'm Claire Parker-Jones, a senior frontend developer based in the
+          North West of England.
+        </p>
+        <p>
+		  I was made redundant in August when my employer Laterooms.com went into administration, during my maternity leave. Now I'm looking for a new, part-time role.
+        </p>
+        <p>I have 6 years experience writing code for web applications, mostly JavaScript and CSS. There's more details on my <a href="/work-history">Work History</a> page.</p>
+	  </div>
 
-        {{ partial "footer.html" . }}
-    </body>
+      <div class="c-cta">
+        I'd love to chat about new opportunities. <a class="" href={{ print "mailto:" .Site.Params.EmailAddress "?subject=Hi" }}>Send me an email</a> at claire@clairecodes.com.
+	  </div>
+	  
+	  <div>
+		  <p>I've been blogging about web development on this site since 2015. Why not:</p>
+		  <ul>
+			  <li>read some of my <a href="/blog">blog posts</a></li>
+			  <li>find out what I've been working on recently in my <a href="/dev-diary">Dev Diary</a></li>
+			  <li>find even more coding content on my Instagram account <a href="https://instagram.com/claire_codes">claire_codes</a> (read the captions!)</li>
+		  </ul>
+	  </div>
+    </div>
+
+    {{ partial "footer.html" . }}
+  </body>
 </html>
