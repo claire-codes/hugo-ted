@@ -14,7 +14,7 @@
         <main>
             <div class="o-main__wrapper c-post">
                 <h1 class="c-post__title">{{ .Title }}</h1>
-                <h3 class="post-date"><i class="far fa-calendar-alt"></i>&nbsp;&nbsp;{{ .Date.Format "2 January 2006 " }}</h3>
+                <div class="c-post__date"><i class="far fa-calendar-alt"></i>&nbsp;&nbsp;{{ .Date.Format "2 January 2006 " }}</div>
                 <div class="reading-time"><i class="far fa-clock"></i>&nbsp;&nbsp;{{ .ReadingTime }} minute read</div>
                 {{ if .Params.categories }}
                     {{ partial "categories.html" . }}
