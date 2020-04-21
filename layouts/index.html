@@ -7,36 +7,39 @@
     {{ partial "head.html" . }}
   </head>
   <body class="o-body">
+    {{ partial "skip-link.html" . }}
     {{ partial "header.html" . }}
+    
+    <main id="main">
+      <div class="o-main__wrapper">
+        <div>
+          <p>
+            Hi, I'm Claire Parker-Jones, a senior
+            <strong>frontend developer</strong> based in the North West of
+            England.
+          </p>
+        </div>
 
-    <div class="o-main__wrapper">
-      <div>
-        <p>
-          Hi, I'm Claire Parker-Jones, a senior
-          <strong>frontend developer</strong> based in the North West of
-          England.
-        </p>
+        <div>
+          <p>
+            I've been blogging about web development on this site since 2015. Why
+            not:
+          </p>
+          <ul>
+            <li>read some of my <a href="/blog">blog posts</a></li>
+            <li>
+              find out what I've been working on recently in my
+              <a href="/dev-diary">Dev Diary</a>
+            </li>
+            <li>
+              find even more coding content on my Instagram account
+              <a href="https://instagram.com/claire_codes">claire_codes</a> (read
+              the captions!)
+            </li>
+          </ul>
+        </div>
       </div>
-
-      <div>
-        <p>
-          I've been blogging about web development on this site since 2015. Why
-          not:
-        </p>
-        <ul>
-          <li>read some of my <a href="/blog">blog posts</a></li>
-          <li>
-            find out what I've been working on recently in my
-            <a href="/dev-diary">Dev Diary</a>
-          </li>
-          <li>
-            find even more coding content on my Instagram account
-            <a href="https://instagram.com/claire_codes">claire_codes</a> (read
-            the captions!)
-          </li>
-        </ul>
-      </div>
-    </div>
+    </main>
 
     {{ partial "footer.html" . }}
   </body>
