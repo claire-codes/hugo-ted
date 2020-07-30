@@ -10,11 +10,12 @@
 
 <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
 
-<link rel="icon" type="image/png" sizes="32x32" href="{{ "favicon/favicon-32x32.png" | absURL }}">
-<link rel="icon" type="image/png" sizes="96x96" href="{{ "favicon/favicon-96x96.png" | absURL }}">
-<link rel="icon" type="image/png" sizes="16x16" href="{{ "favicon/favicon-16x16.png" | absURL }}">
+<link rel="icon" href="{{ "favicon/favicon.svg" | absURL }}">
+<link rel="mask-icon" href="{{ "favicon/mask-icon.svg" | absURL }}" color="#7E6DD2">
+<link rel="apple-touch-icon" href="{{ "favicon/apple-touch-icon.png" | absURL }}">
+<link rel="manifest" href={{ "manifest.json" | absURL }}>
 
-<meta name="theme-color" content="#4527a0">
+<meta name="theme-color" content="#7E6DD2">
 
 {{ with .OutputFormats.Get "rss" -}}
     {{ printf `<link rel="%s" type="%s+%s" href="%s" title="%s" />` .Rel .MediaType.Type .MediaType.Suffix .Permalink $.Site.Title | safeHTML }}
