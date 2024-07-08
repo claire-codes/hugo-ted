@@ -26,9 +26,6 @@
                 </div>
                 <div class="c-post__footer">
                     {{ partial "buymeacoffee.html" . }}
-                    {{ with .Site.Params.TwitterID }}
-                    <div><i class="fab fa-twitter" aria-hidden="true"></i>&nbsp;&nbsp;Comments? <a href="https://twitter.com/{{.}}" target="_blank" rel="noopener noreferrer">Send me a Tweet</a></div>
-                    {{ end }}
                     {{ partial "editOnGit.html" . }}
                 </div>
             </article>
